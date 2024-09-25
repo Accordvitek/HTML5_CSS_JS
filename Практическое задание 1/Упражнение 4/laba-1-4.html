@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>laba-1-4</title>
+    <script>
+        (function() {
+            'use strict';
+
+            class NewClass {
+                constructor(title, url) {
+                    this.title = title;
+                    this.url = url;
+                }
+
+                show() {
+                    document.write(`Title: ${this.title}<br>URL: <a href="${this.url}" target="_blank">${this.url}</a><br>`);
+                }
+            }
+
+            window.showNewClass = function() {
+                const cls = new NewClass("Moto Guzzi", "https://ru.wikipedia.org/wiki/Moto_Guzzi");
+                cls.show();
+            };
+        })();
+    </script>
+</head>
+<body>
+    <button onclick="showNewClass()">Test</button>
+</body>
+</html>

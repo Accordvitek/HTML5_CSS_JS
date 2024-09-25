@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление CSS из JavaScript</title>
+    <style>
+        #change {
+            font-size: 16px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<p id="change">Moto Guzzi – часть истории мотоциклов Италии и мира.</p>
+<a href="#" id="changeStyleLink">Наведи курсор, чтобы изменить стиль текста</a>
+
+<script>
+    (function () {
+        "use strict"
+        function ChangeStyle() {
+            const element = document.getElementById("change");
+            element.style.color = "red";
+            element.style.fontSize = "24px";
+            element.style.fontWeight = "bold";
+            element.style.textDecoration = "underline";
+        }
+
+        
+        const link = document.getElementById("changeStyleLink");
+        link.addEventListener("mouseover", ChangeStyle);
+    }());
+</script>
+
+</body>
+</html>

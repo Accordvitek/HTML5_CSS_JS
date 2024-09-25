@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>laba-2-1</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        img {
+            transition: transform 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+
+<img id="imgMotoGuzzi" src="MotoGuzzi.jpg" alt="MotoGuzzi" style="width: 400px; cursor: pointer;">
+
+<script>
+    (function () {
+        "use strict";
+        const img = document.getElementById("imgMotoGuzzi");
+        var isEnlarged = false;
+
+        img.addEventListener("click", function() {
+            if (isEnlarged) {
+                img.style.transform = "scale(1)";
+            } else {
+                img.style.transform = "scale(2)";
+            }
+            isEnlarged = !isEnlarged;
+        });
+    }());
+</script>
+</body>
+</html>
